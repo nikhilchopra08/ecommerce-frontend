@@ -1,0 +1,69 @@
+.navBar{
+    // gap : 0%;
+    width : 100%;
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    height: 4rem;
+    align-items: center;
+    text-align: center;
+
+    
+}
+
+.Links{
+    margin: auto;
+    gap: 18%;
+    display: flex;
+    flex-direction: row;
+
+    >a{
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+    & {
+        position: relative;
+        text-decoration: none;
+        color: black;
+        transition: color 0.3s ease; /* Smooth color change */
+      
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -3px; /* Set initial position below the link */
+          left: 0;
+          width: 100%;
+          height: 2px; /* Thickness of the line */
+          background-color: orangered;
+          transition: width 0.3s ease, transform 0.3s ease; /* Animation transitions */
+          transform-origin: center;
+          transform: scaleX(0); /* Initially hidden */
+        }
+      
+        &:hover {
+          color: orangered;
+      
+          &::after {
+            width: 100%; /* Full width on hover */
+            transform: scaleX(1); /* Show the line on hover */
+          }
+        }
+      }
+    }
+      
+}
+
+.logo{
+    float: left;
+    left: 2%;
+    position: relative;
+}
+
+.Profile{
+    float: right;
+    right: 2%;
+    position: relative;
+    &:hover{
+        transform: scale(1.15);
+    }
+}
